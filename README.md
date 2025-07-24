@@ -1,74 +1,130 @@
-# Wizz
+# Wizz - Stage One MVP
 
-This is the Wizz project repository.
+Wizz is an intelligent companion designed to transform professional development from a passive chore into a dynamic, proactive feedback loop.
 
-## Project Overview
+## 🚀 Quick Start
 
-Wizz is a modern JavaScript project designed to [add a brief description of what your project does].
+To launch the Wizz Stage One MVP:
 
-## Getting Started
+```bash
+./launch.sh
+```
 
-### Prerequisites
+This will start both the backend and frontend servers.
 
-- Node.js (version 14 or higher)
-- npm (comes with Node.js)
+## 🌐 Access the Application
 
-### Installation
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:3001
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/cryptonighter/Wizz.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd Wizz
-   ```
-
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-### Running the Project
-
-- To start the development server:
-  ```bash
-  npm run dev
-  ```
-
-- To start the production server:
-  ```bash
-  npm start
-  ```
-
-### Running Tests
-
-- To run tests:
-  ```bash
-  npm test
-  ```
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 Wizz/
-├── src/          # Source code
-├── tests/        # Test files
-├── docs/         # Documentation
-├── package.json  # Project configuration
-└── README.md     # This file
+├── backend/          # Node.js/Fastify server
+├── frontend/         # React/Vite client
+├── database/         # Database schema
+├── docs/             # Documentation
+└── launch.sh         # Launch script
 ```
 
-## Contributing
+## 🧪 Testing
 
-1. Fork the repository
-2. Create a new branch for your feature or bug fix
-3. Make your changes
-4. Commit your changes with a descriptive commit message
-5. Push to your fork
-6. Create a pull request
+Run backend tests:
+```bash
+cd backend && npm test
+```
 
-## License
+## 🛑 Stopping the Servers
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+To stop the servers:
+```bash
+pkill -f "npm start" && pkill -f "npm run dev"
+```
+
+Or check the process IDs and kill them manually:
+```bash
+ps aux | grep "npm start\|npm run dev"
+kill -9 <backend_pid> <frontend_pid>
+```
+
+## 📖 Documentation
+
+- [Project Structure](docs/project-structure.md)
+- [Authentication Progress](docs/authentication-progress.md)
+- [Compass Progress](docs/compass-progress.md)
+- [Progress Summary](docs/progress-summary.md)
+
+## 🛠️ Technologies
+
+- **Backend**: Node.js, Fastify
+- **Frontend**: React, Vite
+- **Database**: PostgreSQL (schema defined)
+- **Authentication**: Passphrase-based access
+
+## ✨ Features Implemented
+
+1. **Passphrase-based Access System**
+2. **User Registration and Login**
+3. **Compass Creation Wizard**
+   - Superpower discovery with explore/commit flow
+   - Multi-step compass creation
+4. **Quest Management**
+   - Create and manage quests
+   - Check-in system for reflection
+5. **Dashboard**
+   - Visual representation of compass
+   - Quest tracking
+6. **Notification Service (V1)**
+   - Scheduled check-in prompts
+
+## � troubleshoot Troubleshooting
+
+### Frontend Not Loading
+
+If you're getting `ERR_CONNECTION_REFUSED` when trying to access http://localhost:3000:
+
+1. Check the frontend logs:
+   ```bash
+   tail -f frontend/frontend.log
+   ```
+
+2. Make sure no other process is using port 3000:
+   ```bash
+   lsof -i :3000
+   ```
+
+3. If another process is using port 3000, either stop that process or change the port in `frontend/vite.config.js`
+
+4. Try rebuilding the frontend:
+   ```bash
+   cd frontend && npm run build
+   ```
+
+### Backend Issues
+
+1. Check the backend logs:
+   ```bash
+   tail -f backend/backend.log
+   ```
+
+2. Make sure no other process is using port 3001:
+   ```bash
+   lsof -i :3001
+   ```
+
+### General Issues
+
+1. Make sure all dependencies are installed:
+   ```bash
+   cd backend && npm install
+   cd ../frontend && npm install
+   ```
+
+2. Restart both servers:
+   ```bash
+   pkill -f "npm start" && pkill -f "npm run dev"
+   ./launch.sh
+   ```
+
+This MVP provides a complete foundation for Stage One: The Personal Alignment Engine.

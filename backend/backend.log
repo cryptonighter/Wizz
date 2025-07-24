@@ -1,0 +1,17 @@
+
+> wizz-backend@1.0.0 start
+> node src/index.js
+
+{"level":30,"time":1753386840593,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","msg":"Auth routes registered successfully"}
+Notification service started
+Checking for quests that need check-in prompts...
+Notification check completed
+{"level":30,"time":1753386840595,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","msg":"Compass routes registered successfully"}
+{"level":30,"time":1753386840596,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","msg":"Quest routes registered successfully"}
+{"level":30,"time":1753386840603,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","msg":"Server listening at http://127.0.0.1:3001"}
+{"level":30,"time":1753386840603,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","msg":"Server listening at http://192.168.148.108:3001"}
+{"level":30,"time":1753386840603,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","msg":"Server listening on 3001"}
+{"level":30,"time":1753386869144,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","reqId":"req-1","req":{"method":"GET","url":"/health","host":"localhost:3001","remoteAddress":"127.0.0.1","remotePort":53482},"msg":"incoming request"}
+{"level":30,"time":1753386869149,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","reqId":"req-1","res":{"statusCode":200},"responseTime":4.82779198884964,"msg":"request completed"}
+{"level":30,"time":1753386878918,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","reqId":"req-2","req":{"method":"GET","url":"/health","host":"localhost:3001","remoteAddress":"127.0.0.1","remotePort":53528},"msg":"incoming request"}
+{"level":30,"time":1753386878919,"pid":47108,"hostname":"Kristapss-MacBook-Air.local","reqId":"req-2","res":{"statusCode":200},"responseTime":0.6981670260429382,"msg":"request completed"}
